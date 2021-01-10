@@ -13,7 +13,7 @@
       }
     </style>
   </head>
-  <body>
+  <body style="margin: 50px;">
     <h1>Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
     <h4>
@@ -24,7 +24,7 @@
           let htmlString = '<ul>';
           for (let file of data) {
             if(file.name != 'index.html'){
-              htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+              htmlString += `<li><a href="${file.path}/index.html">${file.name}</a></li>`;
             }
           }
           htmlString += '</ul>';
