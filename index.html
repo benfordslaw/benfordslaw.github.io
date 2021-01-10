@@ -17,28 +17,29 @@
   <body style="margin: 50px;">
     <h1>Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
-    <h4>
+    <p>
       <script>
         let response;
         const data = [];
+        
         (async () => {
           response = await fetch('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/');
           data.push(await response.json());
           console.log(data);
           let htmlString = '<ul>';
-          for (let file of data) {
-            console.log("x" + `${file.url}`);
+          for (let file of data[0]) {
             if(file.name != 'index.html'){
-              response = await fetch(`${file.url}`);
+              htmlString += `<li><a href="${data[data.length-1][0].path}">${data[data.length-1][0].name}</a></li>`;
+              response = await fetch(file.url);
               data.push(await response.json());
-              console.log(data[data.length-1]);
-              htmlString += `<li><a href="${file.path}/index.html">${file.name}</a></li>`;
+              console.log(data[data.length-1][0]);
+              htmlString += `<li><a href="${data[data.length-1][0].path}">${data[data.length-1][0].name}</a></li>`;
             }
           }
           htmlString += '</ul>';
-          document.getElementsByTagName('h4')[0].innerHTML = htmlString;
+          document.getElementsByTagName('p')[0].innerHTML = htmlString;
         })()
       </script>
-    </h4>
+    <p>
   <body>
 </html>
