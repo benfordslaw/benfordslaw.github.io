@@ -18,13 +18,18 @@
     <h3>/krumɪnɑkər/</h3>
     <h4>
       <script>
+        let response;
+        const data = [];
         (async () => {
-          const response = await fetch('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/');
-          const data = await response.json();
+          response = await fetch('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/');
+          data.push(await response.json());
           console.log(data);
           let htmlString = '<ul>';
           for (let file of data) {
             if(file.name != 'index.html'){
+              response = await fetch(file.self);
+              data.push(await response.json());
+              console.log(data);
               htmlString += `<li><a href="${file.path}/index.html">${file.name}</a></li>`;
             }
           }
