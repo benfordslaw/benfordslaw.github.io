@@ -21,24 +21,47 @@
       <script>
         let response;
         const data = [];
+        let count = 0;
+
+        asynCall('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/');
         
-        (async () => {
-          response = await fetch('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/');
+        async function asynCall(url) {
+          response = await fetch(url);
           data.push(await response.json());
           console.log(data);
           let htmlString = '<ul>';
-          for (let file of data[0]) {
-            if(file.name != 'index.html'){
-              htmlString += `<li><a href="${data[data.length-1][0].path}">${data[data.length-1][0].name}</a></li>`;
-              response = await fetch(file.url);
-              data.push(await response.json());
-              console.log(data[data.length-1][0]);
-              htmlString += `<li><a href="${data[data.length-1][0].path}">${data[data.length-1][0].name}</a></li>`;
+          for (var i=0; i<data[0].length; i++) {
+            if(data[0][i].name != 'index.html'){
+              if(data[0][i].name.indexOf('.') == -1){
+                htmlString += `<li>${data[0][i].name}</li>`;
+                
+                //asynCall(data[0][i].url);
+
+                response = await fetch(data[0][i].url);
+                data.push(await response.json());
+                for(var j=0; j<data[i+1].length; j++){
+                  console.log(data[i+1][j]);
+                  if(data[i+1][j].name.indexOf('.') == -1){
+                    htmlString += `<ul><li>${data[i+1][j].name}</li></ul>`;
+                  } else {
+                    htmlString += `<ul><li><a href="${data[i+1][j].path}">${data[i+1][j].name}</a></li></ul>`;
+                  }
+                }
+
+              } else {
+                htmlString += `<li><a href="${data[0][i].path}">${data[0][i].name}</a></li>`;
+              }
+            } else {
+              data[0].splice(i, 1, );
+              i--;
             }
           }
           htmlString += '</ul>';
           document.getElementsByTagName('p')[0].innerHTML = htmlString;
-        })()
+        }
+
+        
+
       </script>
     <p>
   <body>
