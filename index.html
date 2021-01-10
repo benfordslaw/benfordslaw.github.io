@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="shortcut icon" href="#">
     <title>Krummenacher</title>
     <style>
       p {
@@ -26,8 +27,8 @@
           console.log(data);
           let htmlString = '<ul>';
           for (let file of data) {
+            console.log("x" + file.url);
             if(file.name != 'index.html'){
-              console.log(file.url);
               response = await fetch(file.url);
               data.push(await response.json());
               console.log(data[data.length-1]);
