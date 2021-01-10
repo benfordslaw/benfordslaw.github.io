@@ -27,9 +27,9 @@
           console.log(data);
           let htmlString = '<ul>';
           for (let file of data) {
-            console.log("x" + file.url);
+            console.log("x" + `${file.url}`);
             if(file.name != 'index.html'){
-              response = await fetch(file.url);
+              response = await fetch(`${file.url}`);
               data.push(await response.json());
               console.log(data[data.length-1]);
               htmlString += `<li><a href="${file.path}/index.html">${file.name}</a></li>`;
