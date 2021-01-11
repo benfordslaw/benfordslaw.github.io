@@ -12,54 +12,82 @@
       h1, h2, h3, h4, h5, h6 {
         line-height: 0.25;
       }
+
+      td {
+        vertical-align: top;
+      }
     </style>
   </head>
   <body style="margin: 50px;">
     <h1>Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
-    <p>
-      <script>
-        let response;
-        const data = [];
-        let count = 0;
+    <p></p>
+    <script>
+      const data = [];
+      let htmlString = '';
+      let ls = [[]];
 
-        asynCall('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/');
-        
-        async function asynCall(url) {
-          response = await fetch(url);
-          data.push(await response.json());
-          console.log(data);
-          let htmlString = '<ul>';
-          for (var i=0; i<data[0].length; i++) {
-            if(data[0][i].name != 'index.html'){
-              if(data[0][i].name.indexOf('.') == -1){
-                htmlString += `<li>${data[0][i].name}</li>`;
-                
-                //asynCall(data[0][i].url);
-
-                response = await fetch(data[0][i].url);
-                data.push(await response.json());
-                for(var j=0; j<data[i+1].length; j++){
-                  console.log(data[i+1][j]);
-                  if(data[i+1][j].name.indexOf('.') == -1){
-                    htmlString += `<ul><li>${data[i+1][j].name}</li></ul>`;
-                  } else {
-                    htmlString += `<ul><li><a href="${data[i+1][j].path}">${data[i+1][j].name}</a></li></ul>`;
-                  }
-                }
-
-              } else {
-                htmlString += `<li><a href="${data[0][i].path}">${data[0][i].name}</a></li>`;
-              }
+      asynCall('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/', 0);
+      
+      async function asynCall(url, count) {
+        let response = await fetch(url);
+        data[count] = await response.json();
+        data[count].forEach((dataPt, i) => {
+          if(dataPt.name != 'index.html'){
+            if(dataPt.name.indexOf('.') != -1){
+              ls[count].push(`<a href="${data[count][i].path}">${data[count][i].name}</a>`);
             } else {
-              data[0].splice(i, 1, );
-              i--;
+              ls[count].push(`${dataPt.name}`);
+              
+              if(!ls[count+1]){
+                ls.push([]);
+              }
+              asynCall(data[count][i].url, count+1);
             }
           }
-          htmlString += '</ul>';
-          document.getElementsByTagName('p')[0].innerHTML = htmlString;
-        }
-      </script>
-    <p>
+        });
+        ls[count].push('†');
+        updateList();
+      }
+
+      function updateList() {
+        let groups = [];
+        ls.forEach(list => {
+          groups.push([]);
+          let tempTxt = '';
+          list.forEach((listElement, k) => {
+            if(listElement.indexOf('<a href') != -1){
+              tempTxt += `<li>${listElement}</li>`;
+            } else if (listElement.indexOf('†') != -1){
+              tempTxt += '</ul>';
+              groups[groups.length-1].push(tempTxt);
+              tempTxt = '';
+            } else {
+              tempTxt += `<li>${listElement}</li>`;
+            }
+          });
+        });
+
+        let htmlString = '<table><tr>';
+        ls.forEach((list, j) => {
+          htmlString += '<td><ul>';
+          list.forEach((listElement, k) => {
+            if(listElement.indexOf('<a href') == -1 && listElement.indexOf('†') == -1){
+              if(groups[j+1][k]){
+                if(groups[j+1][k].length > 0){
+                  htmlString += `<li>${listElement}</li><ul>${groups[j+1][k]}`;
+                } else {
+                  htmlString += `<li>${listElement}</li><ul>`;
+                }
+              }
+            }
+          });
+          htmlString += '</ul></td>';
+        });
+        htmlString += '<tr></table>'; 
+        document.getElementsByTagName('p')[0].innerHTML = htmlString;
+
+      }
+    </script>
   <body>
 </html>
