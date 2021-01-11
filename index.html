@@ -21,7 +21,10 @@
   <body style="margin: 50px;">
     <h1>Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
-    <p></p>
+    <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
+      Studying art and biological sciences in the B.X.A. interdisciplinary program at Carnegie Mellon University.<br>
+      These days I'm investigating relationships and labor because it seems like every day I'm learning how to better love and work.</p>
+    <table></table>
     <script>
       const data = [];
       let htmlString = '';
@@ -68,7 +71,7 @@
           });
         });
 
-        let htmlString = '<table><tr>';
+        let htmlString = '<tr>';
         ls.forEach((list, j) => {
           htmlString += '<td><ul>';
           list.forEach((listElement, k) => {
@@ -84,8 +87,8 @@
           });
           htmlString += '</ul></td>';
         });
-        htmlString += '<tr></table>'; 
-        document.getElementsByTagName('p')[0].innerHTML = htmlString;
+        htmlString += '<tr>'; 
+        document.getElementsByTagName('table')[0].innerHTML = htmlString;
 
       }
     </script>
