@@ -19,7 +19,6 @@
     <table></table>
     <script>
       const data = [];
-      let htmlString = '';
       let ls = [[]];
 
       asynCall('https://api.github.com/repos/benfordslaw/benfordslaw.github.io/contents/', 0);
@@ -42,15 +41,15 @@
           }
         });
         ls[count].push('†');
-        updateList();
+        document.getElementsByTagName('table')[0].innerHTML = await updateList();
       }
 
-      function updateList() {
+      async function updateList() {
         let groups = [];
         ls.forEach(list => {
           groups.push([]);
           let tempTxt = '';
-          list.forEach((listElement, k) => {
+          list.forEach(listElement => {
             if(listElement.indexOf('<a href') != -1){
               tempTxt += `<li>${listElement}</li>`;
             } else if (listElement.indexOf('†') != -1){
@@ -67,20 +66,14 @@
         ls.forEach((list, j) => {
           htmlString += '<td><ul>';
           list.forEach((listElement, k) => {
-            if(listElement.indexOf('<a href') == -1 && listElement.indexOf('†') == -1){
-              if(groups[j+1][k]){
-                if(groups[j+1][k].length > 0){
-                  htmlString += `<li>${listElement}</li><ul>${groups[j+1][k]}`;
-                } else {
-                  htmlString += `<li>${listElement}</li><ul>`;
-                }
-              }
+            if(listElement.indexOf('<a href') == -1 && listElement.indexOf('†') == -1 && groups[j+1][k]){
+              htmlString += `<li>${listElement}</li><ul>${groups[j+1][k]}`;
             }
           });
           htmlString += '</ul></td>';
         });
         htmlString += '<tr>'; 
-        document.getElementsByTagName('table')[0].innerHTML = htmlString;
+        return htmlString;
       }
     </script>
   <body>
