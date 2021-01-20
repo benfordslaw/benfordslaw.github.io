@@ -12,7 +12,13 @@ echo "<!DOCTYPE html><html><head>
       a {color:black; text-decoration:none}
       a:hover {background-color:pink}
     </style>
-  </head><body>
+    <script>
+      function displayImage(imageURL) {
+        bg = document.getElementById('bg');
+        bg.style.backgroundImage = 'url(' + imageURL + ')'
+      }
+    </script>
+  </head><body id='bg'>
   <h1>Benjamin Ford Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
     <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
@@ -29,7 +35,11 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
       if [[ "$file" != ".DS_Store" ]]
         then 
           href=${i#*$"github.io"}
+          if [[ "${href#*$'.jpg'}" == "" ]]
+          then echo "<li><a href=$href onmouseover='displayImage(\""$href"\")'>$file</a></li>" >> $OUTPUT
+          else 
           echo "<li><a href="$href">$file</a></li>" >> $OUTPUT
+          fi
       fi
     else
       echo "</ul><li>$file/</li><ul>" >> $OUTPUT
