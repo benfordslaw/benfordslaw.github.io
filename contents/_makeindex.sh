@@ -28,7 +28,7 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
     then
       if [[ "$file" != ".DS_Store" ]]
         then 
-          href=${i/*$"benfordslaw"/$"benfordslaw"}
+          href=${i##*$"contents"}
           echo "<li><a href="$href">$file</a></li>" >> $OUTPUT
       fi
     else
