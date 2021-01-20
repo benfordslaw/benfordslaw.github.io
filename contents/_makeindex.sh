@@ -6,7 +6,7 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      body {margin:50px}
+      body {margin:50px; padding: 10px; }
       td {vertical-align:top}
       ul {list-style-type: circle}
       a {color:black; text-decoration:none}
