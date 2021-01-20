@@ -35,7 +35,7 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
       if [[ "$file" != ".DS_Store" ]]
         then 
           href=${i#*$"github.io"}
-          if [[ "${href#*$'.jpg'}" == "" ]]
+          if [[ "${href#*$'.jpg'}" == "" ]] || [[ "${href#*$'.JPG'}" == "" ]]
           then echo "<li><a href=$href onmouseover='displayImage(\""$href"\")'>$file</a></li>" >> $OUTPUT
           else 
           echo "<li><a href="$href">$file</a></li>" >> $OUTPUT
