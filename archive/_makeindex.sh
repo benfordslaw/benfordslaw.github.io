@@ -1,5 +1,5 @@
-ROOT=/Users/benkrummenacher/Documents/GitHub/benfordslaw.github.io/contents
-HTTP="/Users/benkrummenacher/Documents/GitHub/benfordslaw.github.io/contents"
+ROOT=/Users/benkrummenacher/Documents/GitHub/benfordslaw.github.io/archive
+HTTP="/Users/benkrummenacher/Documents/GitHub/benfordslaw.github.io/archive"
 OUTPUT="index.html" 
 > $OUTPUT
 echo "<!DOCTYPE html><html><head>
