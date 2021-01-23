@@ -21,13 +21,13 @@ echo "<!DOCTYPE html><html><head>
     <script>
       function displayImage(imageURL) {
         var bg = document.getElementById('bg');
-        bg.setAttribute('id', 'bg');
         bg.style.top = '25vh';
         bg.style.left = '25vw';
         bg.style.width = '50vw';
         bg.style.height = '50vh';
         bg.style.position = 'absolute';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
+        bg.style.zIndex = '-1';
       }
     </script>
   </head><body id='body'>
