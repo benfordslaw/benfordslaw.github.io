@@ -25,8 +25,8 @@ echo "<!DOCTYPE html><html><head>
     <script>
       function displayImage(imageURL) {
         var bg = document.createElement('div');
-        bg.style.width = 100%;
-        bg.style.height = 100%;
+        bg.style.width = '100%';
+        bg.style.height = '100%';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundBlendMode = 'color-dodge';
         bg.style.position = '50% 50%'
