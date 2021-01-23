@@ -27,7 +27,7 @@ echo "<!DOCTYPE html><html><head>
         bg.style.height = '100vh';
         bg.style.position = 'relative';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundBlendMode = 'multiply';
+        bg.style.backgroundBlendMode = 'darken';
         document.getElementById('body').appendChild(bg);
       }
     </script>
