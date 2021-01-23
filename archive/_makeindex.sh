@@ -6,10 +6,13 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      body {color: green}
+      h1, h3, p {
+        color: pink;
+      }
       li {
         mix-blend-mode: difference; 
       } article {
+        color: green;
         column-count: 4;
         column-width: 300px
       }
@@ -25,7 +28,7 @@ echo "<!DOCTYPE html><html><head>
         bg.style.left = '25vw';
         bg.style.width = '50vw';
         bg.style.height = '50vh';
-        bg.style.position = 'absolute';
+        bg.style.position = 'fixed';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundSize = 'contain';
         bg.style.backgroundPosition = 'center';
