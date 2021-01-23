@@ -6,9 +6,9 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
+      body { color: red}
       a {
         mix-blend-mode: difference; 
-        color: red; 
         text-decoration:none
       } article {
         column-count: 4;
