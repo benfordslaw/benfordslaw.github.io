@@ -20,15 +20,21 @@ echo "<!DOCTYPE html><html><head>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
       function displayImage(imageURL) {
-        var bg = document.createElement('div');
-        bg.style.top = '0';
-        bg.style.left = '0';
-        bg.style.width = '100vw';
-        bg.style.height = '100vh';
-        bg.style.position = 'absolute';
-        bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundBlendMode = 'darken';
-        document.getElementById('body').appendChild(bg);
+        var bg = document.getElementById('bg');
+        if (bg == null) {
+          var bg = document.createElement('div');
+          bg.setAttribute('id', 'bg');
+          bg.style.top = '0';
+          bg.style.left = '0';
+          bg.style.width = '100vw';
+          bg.style.height = '100vh';
+          bg.style.position = 'absolute';
+          bg.style.backgroundImage = 'url(' + imageURL + ')';
+          bg.style.backgroundBlendMode = 'darken';
+          document.getElementById('body').appendChild(bg);
+        } else {
+          bg.style.backgroundImage = 'url(' + imageURL + ')';
+        }
       }
     </script>
   </head><body id='body'>
