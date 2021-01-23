@@ -26,7 +26,7 @@ echo "<!DOCTYPE html><html><head>
         bg.style.position = 'fixed'
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundBlendMode = 'color-dodge';
-
+        bg.style.transform='translate(-50%, -50%)';
         document.getElementById('body').appendChild(bg);
       }
     </script>
