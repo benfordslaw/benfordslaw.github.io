@@ -6,15 +6,16 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      table {margin:50px; padding: 10px}
-      td {vertical-align:top}
-      ul {list-style-type: circle; mix-blend-mode: multiply; color: red}
-      a {text-decoration:none}
-      a:hover {background-color:pink}
       article {
+        mix-blend-mode: difference; 
+        color: red; 
         column-count: 4;
-        column-width: 300px;
+        column-width: 300px
       }
+      ul {list-style-type: circle}
+      a {text-decoration:none}
+      li {background-color:white}
+      li:hover {background-color:pink}
     </style>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
