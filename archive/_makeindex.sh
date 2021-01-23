@@ -13,6 +13,7 @@ echo "<!DOCTYPE html><html><head>
       a {color:black; text-decoration:none}
       a:hover {background-color:pink}
     </style>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
       function displayImage(imageURL) {
         bg = document.getElementById('bg');
