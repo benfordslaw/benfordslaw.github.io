@@ -27,6 +27,8 @@ echo "<!DOCTYPE html><html><head>
         bg.style.position = 'absolute';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundSize = 'contain';
+        bg.style.backgroundPosition = 'center';
+        bg.style.backgroundRepeat = 'no-repeat';
         bg.style.zIndex = '-1';
       }
     </script>
