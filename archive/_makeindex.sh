@@ -6,9 +6,10 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      article {
+      p {
         mix-blend-mode: difference; 
         color: red; 
+      } article {
         column-count: 4;
         column-width: 300px
       }
@@ -43,7 +44,7 @@ echo "<!DOCTYPE html><html><head>
       <article>" >> $OUTPUT
 for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
   path=`basename "$filepath"`
-  echo "<div>$path/<ul><ul>" >> $OUTPUT
+  echo "<div><p>$path</p>/<ul><ul>" >> $OUTPUT
   for i in `find "$filepath" -maxdepth 6 -mindepth 1`; do
     file=`basename "$i"`
     if [[ "$file" == *"."* ]]
@@ -52,9 +53,9 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
         then 
           href=${i#*$"github.io"}
           if [[ "${href#*$'.jpg'}" == "" ]] || [[ "${href#*$'.JPG'}" == "" ]] || [[ "${href#*$'.png'}" == "" ]] 
-          then echo "<li><a onclick='displayImage(\""$href"\")' onmouseover='displayImage(\""$href"\")'>$file</a></li>" >> $OUTPUT
+          then echo "<li><a onclick='displayImage(\""$href"\")' onmouseover='displayImage(\""$href"\")'><p>$file</p></a></li>" >> $OUTPUT
           else 
-          echo "<li><a href="$href">$file</a></li>" >> $OUTPUT
+          echo "<li><a href="$href"><p>$file</p></a></li>" >> $OUTPUT
           fi
       fi
     else
