@@ -7,7 +7,7 @@ echo "<!DOCTYPE html><html><head>
     <title>Krummenacher</title>
     <style>
       h1, h3, p {
-        color: pink;
+        color: black;
       }
       li {
         mix-blend-mode: difference; 
