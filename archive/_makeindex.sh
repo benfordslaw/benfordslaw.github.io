@@ -6,7 +6,7 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      body {background-size: contain; background-position: center}
+      body {background-size: contain;}
       table {margin:50px; padding: 10px;}
       td {vertical-align:top}
       ul {list-style-type: circle}
@@ -28,7 +28,8 @@ echo "<!DOCTYPE html><html><head>
         bg.style.width = 100%;
         bg.style.height = 100%;
         bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundBlendMode = 'color-dodge'
+        bg.style.backgroundBlendMode = 'color-dodge';
+        bg.style.position = '50% 50%'
       }
     </script>
   </head><body>
