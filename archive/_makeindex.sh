@@ -6,9 +6,10 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      table {margin:50px; padding: 10px; mix-blend-mode:difference}
+      table {margin:50px; padding: 10px}
       td {vertical-align:top}
       ul {list-style-type: circle}
+      li {mix-blend-mode: difference}
       a {color:black; text-decoration:none}
       a:hover {background-color:pink}
       article {
