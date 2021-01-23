@@ -14,21 +14,23 @@
       ul {list-style-type: circle}
       a {color: green; text-decoration:none}
       a:hover {background-color:black}
+      .bg {
+        top: 25vh;
+        left: 25vw;
+        width: 50vw;
+        height: 50vh;
+        position: fixed;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
     </style>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
       function displayImage(imageURL) {
         var bg = document.getElementById('bg');
-        bg.style.top = '25vh';
-        bg.style.left = '25vw';
-        bg.style.width = '50vw';
-        bg.style.height = '50vh';
-        bg.style.position = 'fixed';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundSize = 'contain';
-        bg.style.backgroundPosition = 'center';
-        bg.style.backgroundRepeat = 'no-repeat';
-        bg.style.zIndex = '-1';
       }
     </script>
   </head><body>
@@ -167,41 +169,39 @@
 <li><a onclick='displayImage("/archive/turners/milk/paper-on-floor.JPG")' onmouseover='displayImage("/archive/turners/milk/paper-on-floor.JPG")'>paper-on-floor.JPG</a></li>
 <li><a onclick='displayImage("/archive/turners/milk/title-cards-on-wall.JPG")' onmouseover='displayImage("/archive/turners/milk/title-cards-on-wall.JPG")'>title-cards-on-wall.JPG</a></li>
 </ul><li>turners-made-fast/</li><ul>
-</ul><li>installation/</li><ul>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/installation/distant.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/installation/distant.JPG")'>distant.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/installation/final-feet.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/installation/final-feet.JPG")'>final-feet.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/installation/final-headshot.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/installation/final-headshot.JPG")'>final-headshot.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/installation/myself-for-scale.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/installation/myself-for-scale.JPG")'>myself-for-scale.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/installation/pre-installation.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/installation/pre-installation.JPG")'>pre-installation.JPG</a></li>
-</ul><li>process/</li><ul>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/arm-addition-from-below.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/arm-addition-from-below.JPG")'>arm-addition-from-below.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/belt-addition.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/belt-addition.JPG")'>belt-addition.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/both-pant-pockets.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/both-pant-pockets.JPG")'>both-pant-pockets.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/cadaver.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/cadaver.JPG")'>cadaver.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/cigarette.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/cigarette.JPG")'>cigarette.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/finished-jug.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/finished-jug.JPG")'>finished-jug.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/in-bobs-studio.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/in-bobs-studio.JPG")'>in-bobs-studio.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/in-motion-1.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/in-motion-1.JPG")'>in-motion-1.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/in-motion-2.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/in-motion-2.JPG")'>in-motion-2.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/in-motion-3.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/in-motion-3.JPG")'>in-motion-3.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/in-motion-4.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/in-motion-4.JPG")'>in-motion-4.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/jug-in-hand.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/jug-in-hand.JPG")'>jug-in-hand.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/leg-reinforcement.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/leg-reinforcement.JPG")'>leg-reinforcement.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/moving-body.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/moving-body.JPG")'>moving-body.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/myself-for-scale-1.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/myself-for-scale-1.JPG")'>myself-for-scale-1.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/myself-for-scale-3.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/myself-for-scale-3.JPG")'>myself-for-scale-3.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/next-to-crates.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/next-to-crates.JPG")'>next-to-crates.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/partial-shirt.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/partial-shirt.JPG")'>partial-shirt.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/pocket-detail.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/pocket-detail.JPG")'>pocket-detail.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/proposal.jpg")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/proposal.jpg")'>proposal.jpg</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/second-pant-leg.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/second-pant-leg.JPG")'>second-pant-leg.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/second-sleeve-progress.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/second-sleeve-progress.JPG")'>second-sleeve-progress.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/single-pant-leg.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/single-pant-leg.JPG")'>single-pant-leg.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/single-pant-pockets.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/single-pant-pockets.JPG")'>single-pant-pockets.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/single-sleeve.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/single-sleeve.JPG")'>single-sleeve.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/standing-with-arm.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/standing-with-arm.JPG")'>standing-with-arm.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/standing-without-arm.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/standing-without-arm.JPG")'>standing-without-arm.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/unadorned-clothes.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/unadorned-clothes.JPG")'>unadorned-clothes.JPG</a></li>
-<li><a onclick='displayImage("/archive/turners/turners-made-fast/process/vest.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/process/vest.JPG")'>vest.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/arm-addition-from-below.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/arm-addition-from-below.JPG")'>arm-addition-from-below.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/belt-addition.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/belt-addition.JPG")'>belt-addition.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/both-pant-pockets.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/both-pant-pockets.JPG")'>both-pant-pockets.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/cadaver.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/cadaver.JPG")'>cadaver.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/cigarette.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/cigarette.JPG")'>cigarette.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/distant.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/distant.JPG")'>distant.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/final-feet.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/final-feet.JPG")'>final-feet.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/final-headshot.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/final-headshot.JPG")'>final-headshot.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/finished-jug.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/finished-jug.JPG")'>finished-jug.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/in-bobs-studio.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/in-bobs-studio.JPG")'>in-bobs-studio.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/in-motion-1.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/in-motion-1.JPG")'>in-motion-1.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/in-motion-2.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/in-motion-2.JPG")'>in-motion-2.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/in-motion-3.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/in-motion-3.JPG")'>in-motion-3.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/in-motion-4.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/in-motion-4.JPG")'>in-motion-4.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/jug-in-hand.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/jug-in-hand.JPG")'>jug-in-hand.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/leg-reinforcement.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/leg-reinforcement.JPG")'>leg-reinforcement.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/moving-body.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/moving-body.JPG")'>moving-body.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/myself-for-scale-1.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/myself-for-scale-1.JPG")'>myself-for-scale-1.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/myself-for-scale-3.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/myself-for-scale-3.JPG")'>myself-for-scale-3.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/myself-for-scale.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/myself-for-scale.JPG")'>myself-for-scale.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/next-to-crates.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/next-to-crates.JPG")'>next-to-crates.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/partial-shirt.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/partial-shirt.JPG")'>partial-shirt.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/pocket-detail.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/pocket-detail.JPG")'>pocket-detail.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/pre-installation.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/pre-installation.JPG")'>pre-installation.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/proposal.jpg")' onmouseover='displayImage("/archive/turners/turners-made-fast/proposal.jpg")'>proposal.jpg</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/second-pant-leg.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/second-pant-leg.JPG")'>second-pant-leg.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/second-sleeve-progress.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/second-sleeve-progress.JPG")'>second-sleeve-progress.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/single-pant-leg.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/single-pant-leg.JPG")'>single-pant-leg.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/single-pant-pockets.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/single-pant-pockets.JPG")'>single-pant-pockets.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/single-sleeve.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/single-sleeve.JPG")'>single-sleeve.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/standing-with-arm.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/standing-with-arm.JPG")'>standing-with-arm.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/standing-without-arm.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/standing-without-arm.JPG")'>standing-without-arm.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/unadorned-clothes.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/unadorned-clothes.JPG")'>unadorned-clothes.JPG</a></li>
+<li><a onclick='displayImage("/archive/turners/turners-made-fast/vest.JPG")' onmouseover='displayImage("/archive/turners/turners-made-fast/vest.JPG")'>vest.JPG</a></li>
 </ul></ul></div>
 </article></body></html>

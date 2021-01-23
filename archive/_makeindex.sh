@@ -18,21 +18,23 @@ echo "<!DOCTYPE html><html><head>
       ul {list-style-type: circle}
       a {color: green; text-decoration:none}
       a:hover {background-color:black}
+      .bg {
+        top: 25vh;
+        left: 25vw;
+        width: 50vw;
+        height: 50vh;
+        position: fixed;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
     </style>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
       function displayImage(imageURL) {
         var bg = document.getElementById('bg');
-        bg.style.top = '25vh';
-        bg.style.left = '25vw';
-        bg.style.width = '50vw';
-        bg.style.height = '50vh';
-        bg.style.position = 'fixed';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundSize = 'contain';
-        bg.style.backgroundPosition = 'center';
-        bg.style.backgroundRepeat = 'no-repeat';
-        bg.style.zIndex = '-1';
       }
     </script>
   </head><body>
