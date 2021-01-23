@@ -6,7 +6,7 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      h1, h3, p {
+      h1, h3, h4, p {
         color: black;
       } 
       article {
@@ -17,7 +17,7 @@ echo "<!DOCTYPE html><html><head>
       }
       ul {list-style-type: circle}
       a {color: green; text-decoration:none}
-      a:hover {background-color:pink}
+      a:hover {background-color:black}
     </style>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
@@ -35,13 +35,18 @@ echo "<!DOCTYPE html><html><head>
         bg.style.zIndex = '-1';
       }
     </script>
-  </head><body id='body'>
-  <div id='bg'></div>
-  <h1>Benjamin Ford Krummenacher</h1>
+  </head><body>
+    <div id='bg'></div>
+    <h1>Benjamin Ford Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
+    <h4><ul>
+      <li><a href='https://www.instagram.com/benfordslaw'>Instagram</a></li>
+      <li><a href='https://www.youtube.com/channel/UCe3cwyi2O5RN2Xfuvgzi12w'>YouTube</a></li>
+      <li><a href='https://github.com/benfordslaw'>GitHub</a></li>
+    </ul></h4>
     <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
       Studying art and biological sciences in the B.X.A. interdisciplinary program at Carnegie Mellon University.<br>
-      These days I'm investigating relationships and labor because it seems like every day I'm learning how to better love and work.</p>
+      These days I'm investigating care and labor because it seems like every day I'm learning how to better love and work.</p>
       <article>" >> $OUTPUT
 for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
   path=`basename "$filepath"`
