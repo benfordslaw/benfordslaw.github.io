@@ -7,7 +7,7 @@ echo "<!DOCTYPE html><html><head>
     <title>Krummenacher</title>
     <style>
       body { color: red}
-      a {
+      li {
         mix-blend-mode: difference; 
         text-decoration:none
       } article {
@@ -15,7 +15,7 @@ echo "<!DOCTYPE html><html><head>
         column-width: 300px
       }
       ul {list-style-type: circle}
-      li {background-color:white}
+      a {background-color:white}
       li:hover {background-color:pink}
     </style>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
