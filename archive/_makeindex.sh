@@ -25,7 +25,7 @@ echo "<!DOCTYPE html><html><head>
         bg.style.height = '100%';
         bg.style.position = 'relative';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundBlendMode = 'color-dodge';
+        bg.style.backgroundBlendMode = 'multiply';
         document.getElementById('body').appendChild(bg);
       }
     </script>
