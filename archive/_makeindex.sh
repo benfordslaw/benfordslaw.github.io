@@ -6,7 +6,6 @@ echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
     <title>Krummenacher</title>
     <style>
-      body {background-size: contain;}
       table {margin:50px; padding: 10px; mix-blend-mode:difference}
       td {vertical-align:top}
       ul {list-style-type: circle}
@@ -27,6 +26,7 @@ echo "<!DOCTYPE html><html><head>
         bg.style.height = '50vh';
         bg.style.position = 'absolute';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
+        bg.style.backgroundSize = 'contain';
         bg.style.zIndex = '-1';
       }
     </script>
