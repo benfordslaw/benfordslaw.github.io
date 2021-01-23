@@ -24,10 +24,10 @@ echo "<!DOCTYPE html><html><head>
         if (bg == null) {
           var bg = document.createElement('div');
           bg.setAttribute('id', 'bg');
-          bg.style.top = '0';
-          bg.style.left = '0';
-          bg.style.width = '100vw';
-          bg.style.height = '100vh';
+          bg.style.top = '25vh';
+          bg.style.left = '25vw';
+          bg.style.width = '50vw';
+          bg.style.height = '50vh';
           bg.style.position = 'absolute';
           bg.style.backgroundImage = 'url(' + imageURL + ')';
           bg.style.backgroundBlendMode = 'color dodge';
