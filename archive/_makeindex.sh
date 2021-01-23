@@ -8,10 +8,9 @@ echo "<!DOCTYPE html><html><head>
     <style>
       h1, h3, p {
         color: black;
-      }
-      li {
+      } 
+      article {
         mix-blend-mode: difference; 
-      } article {
         color: green;
         column-count: 4;
         column-width: 300px
