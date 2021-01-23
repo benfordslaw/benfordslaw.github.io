@@ -21,6 +21,8 @@ echo "<!DOCTYPE html><html><head>
     <script>
       function displayImage(imageURL) {
         var bg = document.createElement('div');
+        bg.style.top = '0';
+        bg.style.left = '0;
         bg.style.width = '100vw';
         bg.style.height = '100vh';
         bg.style.position = 'relative';
