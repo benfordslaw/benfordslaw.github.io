@@ -23,10 +23,9 @@ echo "<!DOCTYPE html><html><head>
         var bg = document.createElement('div');
         bg.style.width = '100%';
         bg.style.height = '100%';
-        bg.style.position = 'fixed'
+        bg.style.position = 'relative';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundBlendMode = 'color-dodge';
-        bg.style.transform='translate(-100%, -100%)';
         document.getElementById('body').appendChild(bg);
       }
     </script>
