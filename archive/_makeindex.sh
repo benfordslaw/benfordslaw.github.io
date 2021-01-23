@@ -13,11 +13,7 @@ echo "<!DOCTYPE html><html><head>
       a {color:black; text-decoration:none}
       a:hover {background-color:pink}
       article {
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
         column-count: 4;
-        -webkit-column-width: 300px;
-        -moz-column-width: 300px;
         column-width: 300px;
       }
     </style>
@@ -30,9 +26,11 @@ echo "<!DOCTYPE html><html><head>
         bg.style.position = 'fixed'
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundBlendMode = 'color-dodge';
+
+        document.getElementById('body').appendChild(div);
       }
     </script>
-  </head><body>
+  </head><body id='body'>
   <h1>Benjamin Ford Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
     <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
