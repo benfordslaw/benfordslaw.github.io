@@ -20,11 +20,14 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     <script>
       function displayImage(imageURL) {
-        bg = document.getElementById('bg');
-        bg.style.backgroundImage = 'url(' + imageURL + ')'
+        var bg = document.createElement('div');
+        bg.style.width = 100%;
+        bg.style.height = 100%;
+        bg.style.backgroundImage = 'url(' + imageURL + ')';
+        bg.style.backgroundBlendMode = 'color-dodge'
       }
     </script>
-  </head><body id='bg'>
+  </head><body>
   <h1>Benjamin Ford Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
     <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
