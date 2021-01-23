@@ -34,7 +34,16 @@ echo "<!DOCTYPE html><html><head>
     <script>
       function displayImage(imageURL) {
         var bg = document.getElementById('bg');
+        bg.style.top = '25vh';
+        bg.style.left = '25vw';
+        bg.style.width = '50vw';
+        bg.style.height = '50vh';
+        bg.style.position = 'fixed';
         bg.style.backgroundImage = 'url(' + imageURL + ')';
+        bg.style.backgroundSize = 'contain';
+        bg.style.backgroundPosition = 'center';
+        bg.style.backgroundRepeat = 'no-repeat';
+        bg.style.zIndex = '-1';
       }
     </script>
   </head><body>
