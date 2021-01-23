@@ -30,7 +30,7 @@ echo "<!DOCTYPE html><html><head>
           bg.style.height = '100vh';
           bg.style.position = 'absolute';
           bg.style.backgroundImage = 'url(' + imageURL + ')';
-          bg.style.backgroundBlendMode = 'darken';
+          bg.style.backgroundBlendMode = 'color dodge';
           document.getElementById('body').appendChild(bg);
         } else {
           bg.style.backgroundImage = 'url(' + imageURL + ')';
