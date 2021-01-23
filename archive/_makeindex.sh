@@ -27,7 +27,7 @@ echo "<!DOCTYPE html><html><head>
         bg.style.backgroundImage = 'url(' + imageURL + ')';
         bg.style.backgroundBlendMode = 'color-dodge';
 
-        document.getElementById('body').appendChild(div);
+        document.getElementById('body').appendChild(bg);
       }
     </script>
   </head><body id='body'>
