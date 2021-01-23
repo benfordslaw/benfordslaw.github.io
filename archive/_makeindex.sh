@@ -8,8 +8,8 @@ echo "<!DOCTYPE html><html><head>
     <style>
       table {margin:50px; padding: 10px}
       td {vertical-align:top}
-      ul {list-style-type: circle; mix-blend-mode: screen}
-      a {color:black; text-decoration:none}
+      ul {list-style-type: circle; mix-blend-mode: multiply; color: red}
+      a {text-decoration:none}
       a:hover {background-color:pink}
       article {
         column-count: 4;
