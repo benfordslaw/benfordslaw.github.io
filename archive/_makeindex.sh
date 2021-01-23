@@ -9,7 +9,7 @@ echo "<!DOCTYPE html><html><head>
       table {margin:50px; padding: 10px}
       td {vertical-align:top}
       ul {list-style-type: circle}
-      li {mix-blend-mode: difference}
+      li {mix-blend-mode: screen}
       a {color:black; text-decoration:none}
       a:hover {background-color:pink}
       article {
