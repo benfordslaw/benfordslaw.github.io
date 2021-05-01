@@ -4,7 +4,7 @@ OUTPUT="index.html"
 > $OUTPUT
 echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
-    <title>Benford</title>
+    <title>Krummenacher</title>
     <style>
       h1, h3, h4, p {
         color: black;
@@ -48,7 +48,7 @@ echo "<!DOCTYPE html><html><head>
     </script>
   </head><body>
     <div id='bg'></div>
-    <h1>Benford Krummenacher</h1>
+    <h1>Benjamin Ford Krummenacher</h1>
     <h3>/krumɪnɑkər/</h3>
     <h4><ul>
       <li><a href='https://www.instagram.com/benfordslaw'>Instagram</a></li>
@@ -57,8 +57,7 @@ echo "<!DOCTYPE html><html><head>
     </ul></h4>
     <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
       Studying art and biological sciences in the B.X.A. interdisciplinary program at Carnegie Mellon University.<br>
-      These days I'm investigating care and labor because it seems like every day I'm learning how to better love and work.<br>
-      Hover or click on images to see them.</p>
+      These days I'm investigating care and labor because it seems like every day I'm learning how to better love and work.</p>
       <article>" >> $OUTPUT
 for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
   path=`basename "$filepath"`
@@ -70,7 +69,7 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
       if [[ "$file" != ".DS_Store" ]]
         then 
           href=${i#*$"github.io"}
-          if [[ "${href#*$'.jpg'}" == "" ]] || [[ "${href#*$'.JPG'}" == "" ]] || [[ "${href#*$'.gif'}" == "" ]] 
+          if [[ "${href#*$'.jpg'}" == "" ]] || [[ "${href#*$'.JPG'}" == "" ]] || [[ "${href#*$'.png'}" == "" ]] 
           then echo "<li><a onclick='displayImage(\""$href"\")' onmouseover='displayImage(\""$href"\")'>$file</a></li>" >> $OUTPUT
           else echo "<li><a href="$href">$file</a></li>" >> $OUTPUT
           fi
