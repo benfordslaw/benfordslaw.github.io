@@ -15,12 +15,12 @@ echo "<!DOCTYPE html><html><head>
       article {
         width: 50vw;
         mix-blend-mode: difference; 
-        color: green;
+        color: forestgreen;
         column-count: 4;
         column-width: 300px
       }
       ul {list-style-type: circle}
-      a {color: green; text-decoration:none}
+      a {color: forestgreen; text-decoration:none}
       a:hover {background-color:white; cursor:pointer}
       .bg {
         top: 25vw;
