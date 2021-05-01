@@ -13,6 +13,7 @@ echo "<!DOCTYPE html><html><head>
         color: black;
       } 
       article {
+        width: 50vw;
         mix-blend-mode: difference; 
         color: green;
         column-count: 4;
@@ -22,7 +23,7 @@ echo "<!DOCTYPE html><html><head>
       a {color: green; text-decoration:none}
       a:hover {background-color:white}
       .bg {
-        top: 0;
+        top: 25vw;
         right: 0vw;
         width: 50vw;
         height: 50vh;
@@ -37,7 +38,7 @@ echo "<!DOCTYPE html><html><head>
     <script>
       function displayImage(imageURL) {
         var bg = document.getElementById('bg');
-        bg.style.top = '0vh';
+        bg.style.top = '25vh';
         bg.style.right = '0vw';
         bg.style.width = '50vw';
         bg.style.height = '50vh';
