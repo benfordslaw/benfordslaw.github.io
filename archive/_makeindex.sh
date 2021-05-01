@@ -73,7 +73,7 @@ for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
       if [[ "$file" != ".DS_Store" ]]
         then 
           href=${i#*$"github.io"}
-          if [[ "${href#*$'.jpg'}" == "" ]] || [[ "${href#*$'.jpeg'}" == "" ]] || [[ "${href#*$'.JPG'}" == "" ]] || [[ "${href#*$'.gif'}" == "" ]] 
+          if [[ "${href#*$'.jpg'}" == "" ]] || [[ "${href#*$'.jpeg'}" == "" ]] || [[ "${href#*$'.JPG'}" == "" ]] || [[ "${href#*$'.gif'}" == "" ]] || [[ "${href#*$'.png'}" == "" ]]
           then echo "<li><a onclick='displayImage(\""$href"\")'>$file</a></li>" >> $OUTPUT
           else echo "<li><a href="$href">$file</a></li>" >> $OUTPUT
           fi
