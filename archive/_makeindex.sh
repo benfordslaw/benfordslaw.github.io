@@ -21,7 +21,7 @@ echo "<!DOCTYPE html><html><head>
       }
       ul {list-style-type: circle}
       a {color: green; text-decoration:none}
-      a:hover {background-color:white}
+      a:hover {background-color:white; cursor:pointer}
       .bg {
         top: 25vw;
         right: 0vw;
