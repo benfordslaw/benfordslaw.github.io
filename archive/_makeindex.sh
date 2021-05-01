@@ -22,8 +22,8 @@ echo "<!DOCTYPE html><html><head>
       a {color: green; text-decoration:none}
       a:hover {background-color:white}
       .bg {
-        top: 25vh;
-        left: 25vw;
+        top: 0vw;
+        right: 0vw;
         width: 50vw;
         height: 50vh;
         position: fixed;
