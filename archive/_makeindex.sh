@@ -61,7 +61,7 @@ echo "<!DOCTYPE html><html><head>
     </ul></h4>
     <p>Currently in my childhood home in St. Louis, MO. Otherwise, I stay in Pittsburgh, PA. <br>
       Studying art and biological sciences in the B.X.A. interdisciplinary program at Carnegie Mellon University.<br>
-      These days I'm investigating care and labor because it seems like every day I'm learning how to better love and work.</p>
+      These days I'm investigating education, community, and labor because it seems like every day I'm learning how to better love and work.</p>
       <article>" >> $OUTPUT
 for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
   path=`basename "$filepath"`
