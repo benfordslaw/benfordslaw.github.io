@@ -2,74 +2,8 @@
     <meta charset='utf-8' />
     <title>Selected Art</title>
     <link rel='stylesheet' href='../style.css'>
+    <script src=../scripts.js></script>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'> 
-    <script>
-	  function displayImage(imageURL) {
-        var bg = document.getElementById('bg');
-        bg.style.top = '25vh';
-        bg.style.right = '10vw';
-        bg.style.width = '30vw';
-        bg.style.height = '50vh';
-        bg.style.position = 'fixed';
-        bg.style.backgroundImage = 'url(' + imageURL + ')';
-        bg.style.backgroundColor = 'white';
-        bg.style.backgroundSize = 'contain';
-        bg.style.backgroundPosition = 'center';
-        bg.style.backgroundRepeat = 'no-repeat';
-        bg.style.mixBlendMode = 'multiply'; 
-		bg.style.cursor = 'zoom-in';
-        bg.style.zIndex = '1';
-        bg.innerHTML = '';
-      }
-      function displayText(txtURL) {
-        var bg = document.getElementById('bg');
-        bg.style.overflowY = 'auto';
-        bg.style.top = '25vh';
-        bg.style.right = '10vw';
-        bg.style.width = '30vw';
-        bg.style.height = '50vh';
-        bg.style.position = 'fixed';
-        bg.style.backgroundImage = 'none';
-        bg.style.backgroundColor = 'yellow';
-        bg.style.color = 'black';
-        bg.style.mixBlendMode = 'multiply';
-		bg.style.cursor = 'zoom-in';
-        var rawFile = new XMLHttpRequest();
-        rawFile.open('GET', txtURL, false);
-        rawFile.onreadystatechange = function ()
-        {
-            if(rawFile.readyState === 4)
-            {
-                if(rawFile.status === 200 || rawFile.status == 0)
-                {
-                    var allText = rawFile.responseText;
-                    bg.innerHTML = allText;
-                }
-            }
-        }
-        rawFile.send(null);
-        bg.style.zIndex = '1';
-      }
-      var full = false;
-  	  function toggleBG() {
-		if (!full) {
-          bg.style.top = '10vh';
-		  bg.style.right = '10vw';
-		  bg.style.width = '80vw';
-		  bg.style.height = '80vh';
-		  full = true;
-		  bg.style.cursor = 'zoom-out';
-		}
-	    else {
-		  bg.style.top = '25vh';
-		  bg.style.right = '10vw';
-		  bg.style.width = '30vw';
-		  bg.style.height = '50vh';
-		  full = false;
-		  bg.style.cursor = 'zoom-in';
-		}
-      }
-    </script>
   </head><body>
   <div id='bg' onclick='toggleBG()'></div> <h1><a href='https://benfordslaw.github.io' style='color:black'>Benford Krummenacher</a></h1> <h3>/krumɪnɑkər/</h3> <h4><ul> <li><a href='https://www.instagram.com/benfordslaw'>Instagram</a></li> <li><a href='https://open.spotify.com/artist/31Fp7TWqvWz0fnyCvOEfZP?si=LnCP-fgbSO-oHFFq3lx5WQ'>Spotify</a></li> <li><a href='https://www.youtube.com/channel/UCe3cwyi2O5RN2Xfuvgzi12w'>YouTube</a></li> <li><a href='https://github.com/benfordslaw'>GitHub</a></li> </ul></h4> <p>Currently living in Pittsburgh, Pennsylvania. <br> Studying art and biological sciences in the B.X.A. interdisciplinary program at Carnegie Mellon University.<br> Undergraduate metabologenomics research assistant for <a href='http://mohimanilab.cbd.cmu.edu/'>Mohimani Lab</a>.</p> <article>
 <div>video-iso/<ul><ul>

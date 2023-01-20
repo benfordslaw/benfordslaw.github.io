@@ -3,7 +3,7 @@ OUTPUT="index.html"
 > $OUTPUT
 echo "<!DOCTYPE html><html><head>
     <meta charset='utf-8' />
-        <title>My Site Index</title>
+        <title>Site Index</title>
         <link rel='stylesheet' href='style.css'>
 	    <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
     </head><body>
