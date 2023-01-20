@@ -1,0 +1,149 @@
+<!DOCTYPE html><html><head>
+    <meta charset='utf-8' />
+    <title>Selected Art</title>
+    <link rel='stylesheet' href='../style.css'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'> 
+    <script>
+	  function displayImage(imageURL) {
+        var bg = document.getElementById('bg');
+        bg.style.top = '25vh';
+        bg.style.right = '10vw';
+        bg.style.width = '30vw';
+        bg.style.height = '50vh';
+        bg.style.position = 'fixed';
+        bg.style.backgroundImage = 'url(' + imageURL + ')';
+        bg.style.backgroundColor = 'white';
+        bg.style.backgroundSize = 'contain';
+        bg.style.backgroundPosition = 'center';
+        bg.style.backgroundRepeat = 'no-repeat';
+        bg.style.mixBlendMode = 'multiply'; 
+		bg.style.cursor = 'zoom-in';
+        bg.style.zIndex = '1';
+        bg.innerHTML = '';
+      }
+      function displayText(txtURL) {
+        var bg = document.getElementById('bg');
+        bg.style.overflowY = 'auto';
+        bg.style.top = '25vh';
+        bg.style.right = '10vw';
+        bg.style.width = '30vw';
+        bg.style.height = '50vh';
+        bg.style.position = 'fixed';
+        bg.style.backgroundImage = 'none';
+        bg.style.backgroundColor = 'yellow';
+        bg.style.color = 'black';
+        bg.style.mixBlendMode = 'multiply';
+		bg.style.cursor = 'zoom-in';
+        var rawFile = new XMLHttpRequest();
+        rawFile.open('GET', txtURL, false);
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    bg.innerHTML = allText;
+                }
+            }
+        }
+        rawFile.send(null);
+        bg.style.zIndex = '1';
+      }
+      var full = false;
+  	  function toggleBG() {
+		if (!full) {
+          bg.style.top = '10vh';
+		  bg.style.right = '10vw';
+		  bg.style.width = '80vw';
+		  bg.style.height = '80vh';
+		  full = true;
+		  bg.style.cursor = 'zoom-out';
+		}
+	    else {
+		  bg.style.top = '25vh';
+		  bg.style.right = '10vw';
+		  bg.style.width = '30vw';
+		  bg.style.height = '50vh';
+		  full = false;
+		  bg.style.cursor = 'zoom-in';
+		}
+      }
+    </script>
+  </head><body>
+  <div id='bg' onclick='toggleBG()'></div> <h1><a href='https://benfordslaw.github.io' style='color:black'>Benford Krummenacher</a></h1> <h3>/krumɪnɑkər/</h3> <h4><ul> <li><a href='https://www.instagram.com/benfordslaw'>Instagram</a></li> <li><a href='https://open.spotify.com/artist/31Fp7TWqvWz0fnyCvOEfZP?si=LnCP-fgbSO-oHFFq3lx5WQ'>Spotify</a></li> <li><a href='https://www.youtube.com/channel/UCe3cwyi2O5RN2Xfuvgzi12w'>YouTube</a></li> <li><a href='https://github.com/benfordslaw'>GitHub</a></li> </ul></h4> <p>Currently living in Pittsburgh, Pennsylvania. <br> Studying art and biological sciences in the B.X.A. interdisciplinary program at Carnegie Mellon University.<br> Undergraduate metabologenomics research assistant for <a href='http://mohimanilab.cbd.cmu.edu/'>Mohimani Lab</a>.</p> <article>
+<div>video-iso/<ul><ul>
+<li><a onclick='displayImage("/art/video-iso/close-1.jpeg")'>close-1.jpeg</a></li>
+<li><a onclick='displayImage("/art/video-iso/close-2.jpeg")'>close-2.jpeg</a></li>
+<li><a onclick='displayImage("/art/video-iso/far.jpeg")'>far.jpeg</a></li>
+<li><a onclick='displayText("/art/video-iso/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul></ul></div>
+<div>video_compression_by_speed/<ul><ul>
+<li><a onclick='displayImage("/art/video_compression_by_speed/0.png")'>0.png</a></li>
+<li><a onclick='displayImage("/art/video_compression_by_speed/1.png")'>1.png</a></li>
+<li><a onclick='displayImage("/art/video_compression_by_speed/2.png")'>2.png</a></li>
+<li><a onclick='displayImage("/art/video_compression_by_speed/3.png")'>3.png</a></li>
+<li><a onclick='displayImage("/art/video_compression_by_speed/4.png")'>4.png</a></li>
+</ul></ul></div>
+<div>objects-of-desire/<ul><ul>
+<li><a onclick='displayText("/art/objects-of-desire/questions-for-a-librarian.txt")' style='color:magenta'>questions-for-a-librarian.txt</a></li>
+<li><a onclick='displayImage("/art/objects-of-desire/sample.gif")'>sample.gif</a></li>
+<li><a onclick='displayText("/art/objects-of-desire/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul></ul></div>
+<div>generated-friends/<ul><ul>
+</ul><li>life-size/</li><ul>
+<li><a onclick='displayImage("/art/generated-friends/life-size/friend-1.png")'>friend-1.png</a></li>
+<li><a onclick='displayImage("/art/generated-friends/life-size/friend-2.png")'>friend-2.png</a></li>
+<li><a onclick='displayImage("/art/generated-friends/life-size/generations.gif")'>generations.gif</a></li>
+<li><a onclick='displayText("/art/generated-friends/life-size/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul><li>miniature/</li><ul>
+<li><a onclick='displayImage("/art/generated-friends/miniature/looking-for-all-her-strength-to-turn.png")'>looking-for-all-her-strength-to-turn.png</a></li>
+<li><a onclick='displayImage("/art/generated-friends/miniature/looking-for-your-treatment.png")'>looking-for-your-treatment.png</a></li>
+</ul></ul></div>
+<div>turners-made-fast-2/<ul><ul>
+</ul><li>details/</li><ul>
+<li><a onclick='displayImage("/art/turners-made-fast-2/details/manual-blur-detail-1.jpg")'>manual-blur-detail-1.jpg</a></li>
+<li><a onclick='displayImage("/art/turners-made-fast-2/details/manual-blur-detail-2.jpg")'>manual-blur-detail-2.jpg</a></li>
+<li><a onclick='displayImage("/art/turners-made-fast-2/details/manual-blur-detail-3.jpg")'>manual-blur-detail-3.jpg</a></li>
+<li><a onclick='displayImage("/art/turners-made-fast-2/details/optical-flow-detail-1.jpg")'>optical-flow-detail-1.jpg</a></li>
+<li><a onclick='displayImage("/art/turners-made-fast-2/details/optical-flow-detail-2.jpg")'>optical-flow-detail-2.jpg</a></li>
+<li><a onclick='displayImage("/art/turners-made-fast-2/details/optical-flow-detail-3.jpg")'>optical-flow-detail-3.jpg</a></li>
+</ul><li>manual-blur/</li><ul>
+<li><a onclick='displayImage("/art/turners-made-fast-2/manual-blur/plot.jpg")'>plot.jpg</a></li>
+</ul><li>optical-flow/</li><ul>
+<li><a onclick='displayImage("/art/turners-made-fast-2/optical-flow/plot.jpg")'>plot.jpg</a></li>
+</ul></ul></div>
+<div>markov-hershey-script/<ul><ul>
+<li><a onclick='displayImage("/art/markov-hershey-script/long-word-generations.gif")'>long-word-generations.gif</a></li>
+<li><a onclick='displayImage("/art/markov-hershey-script/on-paper.jpg")'>on-paper.jpg</a></li>
+<li><a onclick='displayImage("/art/markov-hershey-script/short-word-generations.gif")'>short-word-generations.gif</a></li>
+<li><a onclick='displayText("/art/markov-hershey-script/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul></ul></div>
+<div>hp7475a_drawings/<ul><ul>
+<li><a onclick='displayImage("/art/hp7475a_drawings/still_life_no_3.jpg")'>still_life_no_3.jpg</a></li>
+<li><a onclick='displayImage("/art/hp7475a_drawings/still_life_no_4.jpg")'>still_life_no_4.jpg</a></li>
+</ul></ul></div>
+<div>party-planning/<ul><ul>
+</ul><li>how-to-plan-a-comfortable-party/</li><ul>
+<li><a onclick='displayImage("/art/party-planning/how-to-plan-a-comfortable-party/page-1.png")'>page-1.png</a></li>
+<li><a onclick='displayImage("/art/party-planning/how-to-plan-a-comfortable-party/page-2.png")'>page-2.png</a></li>
+<li><a onclick='displayImage("/art/party-planning/how-to-plan-a-comfortable-party/page-3.png")'>page-3.png</a></li>
+<li><a onclick='displayImage("/art/party-planning/how-to-plan-a-comfortable-party/page-4.png")'>page-4.png</a></li>
+<li><a onclick='displayImage("/art/party-planning/how-to-plan-a-comfortable-party/page-5.png")'>page-5.png</a></li>
+<li><a onclick='displayText("/art/party-planning/how-to-plan-a-comfortable-party/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul><li>party-planning-costumes/</li><ul>
+<li><a onclick='displayImage("/art/party-planning/party-planning-costumes/generated-costumes.gif")'>generated-costumes.gif</a></li>
+<li><a onclick='displayImage("/art/party-planning/party-planning-costumes/modeled-1.png")'>modeled-1.png</a></li>
+<li><a onclick='displayImage("/art/party-planning/party-planning-costumes/modeled-2.png")'>modeled-2.png</a></li>
+<li><a onclick='displayText("/art/party-planning/party-planning-costumes/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul><li>party-planning-floor-mat/</li><ul>
+<li><a onclick='displayImage("/art/party-planning/party-planning-floor-mat/detail.jpg")'>detail.jpg</a></li>
+<li><a onclick='displayImage("/art/party-planning/party-planning-floor-mat/in-use-1.JPG")'>in-use-1.JPG</a></li>
+<li><a onclick='displayImage("/art/party-planning/party-planning-floor-mat/in-use-2.JPG")'>in-use-2.JPG</a></li>
+<li><a onclick='displayImage("/art/party-planning/party-planning-floor-mat/overview-1.jpg")'>overview-1.jpg</a></li>
+<li><a onclick='displayImage("/art/party-planning/party-planning-floor-mat/overview-2.JPG")'>overview-2.JPG</a></li>
+<li><a onclick='displayText("/art/party-planning/party-planning-floor-mat/statement.txt")' style='color:magenta'>statement.txt</a></li>
+</ul><li>perpetual-party/</li><ul>
+<li><a onclick='displayImage("/art/party-planning/perpetual-party/instructions.png")'>instructions.png</a></li>
+</ul></ul></div>
+</article></body></html>

@@ -1,0 +1,3 @@
+<i>life-sized generative plots, crayola marker on butcher paper</i><br>
+What good is a party without attendees?<br>
+Generated .svgs of friends written in vsketch are converted into HPGL files using a custom config file for vpype. These are plotted life-sized on the USCutter MH871-MK2.

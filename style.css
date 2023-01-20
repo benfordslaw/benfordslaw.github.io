@@ -1,0 +1,26 @@
+body {
+  background-color: white; 
+  font-family: Times;
+  font-size: 12px
+}
+h1, h3, h4, p {
+  color: black;
+} 
+article {
+  width: 50vw;
+  mix-blend-mode: multiply; 
+  color: black;
+  column-count: 4;
+  column-width: 300px
+}
+ul {list-style-type: none}
+a {color: blue; text-decoration:none}
+a:hover {background-color:lime; cursor:alias}
+.bg {
+  position: fixed;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: normal; 
+  z-index: 1;
+}
