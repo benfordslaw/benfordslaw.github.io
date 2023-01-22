@@ -1,5 +1,4 @@
-ROOT=/Users/benkrummenacher/Documents/GitHub/benfordslaw.github.io/art
-HTTP="/Users/benkrummenacher/Documents/GitHub/benfordslaw.github.io/art"
+ROOT=$(pwd)
 OUTPUT="index.html" 
 > $OUTPUT
 echo "<!DOCTYPE html><html><head>
