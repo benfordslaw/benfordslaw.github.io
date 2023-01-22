@@ -12,7 +12,7 @@ function displayImage(imageURL) {
     bg.style.backgroundRepeat = 'no-repeat';
     bg.style.mixBlendMode = 'normal'; 
     bg.style.cursor = 'zoom-in';
-    bg.style.zIndex = '1';
+    bg.style.zIndex = '-1';
     bg.innerHTML = '';
 }
 function displayText(txtURL) {
@@ -42,7 +42,7 @@ function displayText(txtURL) {
         }
     }
     rawFile.send(null);
-    bg.style.zIndex = '1';
+    bg.style.zIndex = '-1';
 }
 var full = false;
 function toggleBG() {
