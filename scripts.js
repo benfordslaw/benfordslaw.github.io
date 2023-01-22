@@ -10,7 +10,7 @@ function displayImage(imageURL) {
     bg.style.backgroundSize = 'contain';
     bg.style.backgroundPosition = 'center';
     bg.style.backgroundRepeat = 'no-repeat';
-    bg.style.mixBlendMode = 'difference'; 
+    bg.style.mixBlendMode = 'normal'; 
     bg.style.cursor = 'zoom-in';
     bg.style.zIndex = '1';
     bg.innerHTML = '';
@@ -26,7 +26,7 @@ function displayText(txtURL) {
     bg.style.backgroundImage = 'none';
     bg.style.backgroundColor = 'yellow';
     bg.style.color = 'black';
-    bg.style.mixBlendMode = 'difference';
+    bg.style.mixBlendMode = 'normal';
     bg.style.cursor = 'zoom-in';
     var rawFile = new XMLHttpRequest();
     rawFile.open('GET', txtURL, false);
