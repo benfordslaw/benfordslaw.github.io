@@ -11,7 +11,7 @@ function displayImage(imageURL) {
     bg.style.backgroundPosition = 'center';
     bg.style.backgroundRepeat = 'no-repeat';
     bg.style.mixBlendMode = 'normal'; 
-    bg.style.cursor = 'lighten';
+    bg.style.cursor = 'color-burn';
     bg.style.zIndex = '1';
     bg.innerHTML = '';
 }
@@ -26,7 +26,7 @@ function displayText(txtURL) {
     bg.style.backgroundImage = 'none';
     bg.style.backgroundColor = 'yellow';
     bg.style.color = 'black';
-    bg.style.mixBlendMode = 'lighten';
+    bg.style.mixBlendMode = 'color-burn';
     bg.style.cursor = 'zoom-in';
     var rawFile = new XMLHttpRequest();
     rawFile.open('GET', txtURL, false);
