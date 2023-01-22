@@ -8,7 +8,7 @@ h1, h3, h4, p {
 } 
 article {
   width: 50vw;
-  mix-blend-mode: difference; 
+  mix-blend-mode: normal; 
   color: black;
   column-count: 4;
   column-width: 300px
