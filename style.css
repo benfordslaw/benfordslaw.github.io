@@ -9,13 +9,13 @@ h1, h3, h4, p {
 article {
   width: 50vw;
   mix-blend-mode: difference; 
-  color: white;
+  color: black;
   column-count: 4;
   column-width: 300px
 }
 ul {list-style-type: none}
-a {color: yellow; text-decoration:none}
-a:hover {background-color:purple; cursor:alias}
+a {color: blue; text-decoration:none}
+a:hover {background-color:green; cursor:alias}
 .bg {
   position: fixed;
   background-size: contain;
