@@ -6,7 +6,7 @@ function displayImage(imageURL) {
     bg.style.height = '50vh';
     bg.style.position = 'fixed';
     bg.style.backgroundImage = 'url(' + imageURL + ')';
-    bg.style.backgroundColor = 'black';
+    bg.style.backgroundColor = 'white';
     bg.style.backgroundSize = 'contain';
     bg.style.backgroundPosition = 'center';
     bg.style.backgroundRepeat = 'no-repeat';
