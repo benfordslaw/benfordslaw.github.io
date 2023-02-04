@@ -6,11 +6,11 @@ function displayImage(imageURL) {
     bg.style.height = '50vh';
     bg.style.position = 'fixed';
     bg.style.backgroundImage = 'url(' + imageURL + ')';
-    bg.style.backgroundColor = 'white';
+    bg.style.backgroundColor = 'transparent';
     bg.style.backgroundSize = 'contain';
     bg.style.backgroundPosition = 'center';
     bg.style.backgroundRepeat = 'no-repeat';
-    bg.style.mixBlendMode = 'multiply'; 
+    bg.style.mixBlendMode = 'normal'; 
     bg.style.cursor = 'color';
     bg.style.zIndex = '1';
     bg.innerHTML = '';
@@ -26,7 +26,7 @@ function displayText(txtURL) {
     bg.style.backgroundImage = 'none';
     bg.style.backgroundColor = 'yellow';
     bg.style.color = 'black';
-    bg.style.mixBlendMode = 'multiply';
+    bg.style.mixBlendMode = 'normal';
     bg.style.cursor = 'zoom-in';
     var rawFile = new XMLHttpRequest();
     rawFile.open('GET', txtURL, false);
