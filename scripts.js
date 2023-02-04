@@ -14,6 +14,8 @@ function displayImage(imageURL) {
     bg.style.cursor = 'color';
     bg.style.zIndex = '1';
     bg.innerHTML = '';
+    var a = $( 'a: contains(\'' + imageURL + '\')' );
+    a.style.backgroundColor = 'lime';
 }
 function displayText(txtURL) {
     var bg = document.getElementById('bg');
