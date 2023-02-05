@@ -60,6 +60,11 @@ function displayImage(imageURL) {
     bg.style.cursor = 'color';
     bg.style.zIndex = '1';
     bg.innerHTML = '';
+    display_caption(imageURL);
+    update_links(imageURL);
+    full = false;
+}
+function display_caption(imageURL) {
     for (const a of document.querySelectorAll("article a")) {
         if (a.getAttribute('onclick').includes(imageURL)) {
             for ( const a_2 of a.parentNode.parentNode.children ) {
@@ -84,8 +89,10 @@ function displayImage(imageURL) {
             }
         }
     }
-    update_links(imageURL);
-    full = false;
+}
+function hide_caption() {
+    caption = document.getElementById('caption');
+    caption.innerHTML = '';
 }
 function displayText(txtURL) {
     var bg = document.getElementById('bg');
@@ -126,6 +133,7 @@ function toggleBG() {
         bg.style.height = '80vh';
         full = true;
         bg.style.cursor = 'zoom-out';
+        hide_caption();
     }
     else {
         bg.style.top = '25vh';

@@ -16,14 +16,11 @@ article {
 ul {list-style-type: none}
 a {color: blue; text-decoration:none}
 a:hover {background-color:green; cursor:alias}
-.bg {
-  position: fixed;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  mix-blend-mode: multiply; 
-  z-index: 1;
-}
-.caption {
+#caption {
   background-color: yellow;
+  display: block;
+  position: fixed;
+  top: 75vh;
+  right: 10vw;
+  width: 30vw;
 }
