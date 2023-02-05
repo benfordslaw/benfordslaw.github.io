@@ -1,13 +1,17 @@
 let idx_shown = 0;
-display_from_key();
 var full = false;
+
+document.addEventListener('click', function(){
+    clearInterval(cycle_img);
+});
+window.onload = (event) => {
+    display_from_key();
+}
 
 var cycle_img = window.setInterval(function(){
     display_from_key();
     idx_shown++;
 }, 5000);
-
-document.addEventListener('onclick', (event) => {clearInterval(cycle_img)}, false);
 
 document.addEventListener('keydown', (event) => {
     clearInterval(cycle_img);
