@@ -25,13 +25,7 @@ document.addEventListener('keydown', (event) => {
         display_from_key();
     } else if (event.keyCode == 32 || event.keyCode == 13) {
         toggleBG();
-    } else if (event.keyCode == 27) {
-        var cycle_img = window.setInterval(function(){
-            display_from_key();
-            idx_shown = Math.floor(Math.random() * Array.from(document.querySelectorAll("article a")).length);
-        }, 2500);
-    }
-}, false);
+    } }, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("article a")) {
         if (a.getAttribute('onclick').includes(imageURL)) {
