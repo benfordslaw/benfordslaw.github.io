@@ -157,7 +157,7 @@ function toggleBG() {
         caption.style.right = '0vw';
         caption.style.width = '100vw';
         caption.style.bottom = '0vh';
-        caption.innerHTML += '<span align="right"> ' + curr_image + '</span>';
+        caption.innerHTML += '<span style="float:right"> ~' + curr_image + '</span>';
     }
     else {
         bg.style.top = '25vh';
