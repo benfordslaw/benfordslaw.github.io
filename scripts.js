@@ -5,13 +5,14 @@ document.addEventListener('click', function(){
     clearInterval(cycle_img);
 });
 window.onload = (event) => {
+    idx_shown = Math.floor(Math.random() * Array.from(document.querySelectorAll("article a")).length);
     display_from_key();
 }
 
 var cycle_img = window.setInterval(function(){
     display_from_key();
-    idx_shown++;
-}, 5000);
+    idx_shown = Math.floor(Math.random() * Array.from(document.querySelectorAll("article a")).length);
+}, 2500);
 
 document.addEventListener('keydown', (event) => {
     clearInterval(cycle_img);
