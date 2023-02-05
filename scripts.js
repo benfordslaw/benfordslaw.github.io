@@ -2,20 +2,23 @@ let idx_shown = 0;
 
 document.addEventListener('keydown', (event) => {
     if (event.keyCode == 74 || event.keyCode == 40) {
-        idx_shown += 1;
+        num_links = Array.from(document.querySelectorAll("a")).length;
+        idx_shown = (idx_shown + 1) % num_links;
     }
     if (event.keyCode == 75 || event.keyCode == 38) {
-        idx_shown -= 1;
+        idx_shown = (idx_shown - 1) % num_links;
     }
     display_from_key();
 }, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("a")) {
-        if (a.getAttribute('onclick').includes(imageURL)) {
-            a.style.backgroundColor = 'yellow';
-            idx_shown = Array.from(document.querySelectorAll("a")).indexOf(a);
-        } else {
-            a.style.backgroundColor = '';
+        if (a.hasAttribute('onclick')) {
+            if (a.getAttribute('onclick').includes(imageURL)) {
+                a.style.backgroundColor = 'yellow';
+                idx_shown = Array.from(document.querySelectorAll("a")).indexOf(a);
+            } else {
+                a.style.backgroundColor = '';
+            }
         }
     }
 }
@@ -24,7 +27,7 @@ function display_from_key() {
     if (url.includes(".txt")) {
         displayText(url);
     } else {
-        displayImage(imageURL);
+        displayImage(url);
     }
 }
 function displayImage(imageURL) {
