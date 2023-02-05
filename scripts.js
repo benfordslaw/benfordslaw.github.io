@@ -11,7 +11,7 @@ document.addEventListener('keydown', (event) => {
 }, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("a")) {
-        if (imageURL.includes('/' + a.innerHTML)) {
+        if (a.getAttribute('onclick').includes(imageURL)) {
             a.style.backgroundColor = 'yellow';
             idx_shown = Array.from(document.querySelectorAll("a")).indexOf(a);
         } else {
@@ -20,8 +20,12 @@ function update_links(imageURL) {
     }
 }
 function display_from_key() {
-    var image = Array.from(document.querySelectorAll("a"))[idx_shown];
-    image.getAttribute('onclick')
+    var url = Array.from(document.querySelectorAll("a"))[idx_shown].getAttribute('onclick').split('"')[1];
+    if (url.includes(".txt")) {
+        displayText(url);
+    } else {
+        displayImage(imageURL);
+    }
 }
 function displayImage(imageURL) {
     var bg = document.getElementById('bg');
