@@ -1,4 +1,5 @@
 let idx_shown = 0;
+display_from_key();
 var full = false;
 
 var cycle_img = window.setInterval(function(){
@@ -6,7 +7,10 @@ var cycle_img = window.setInterval(function(){
     idx_shown++;
 }, 5000);
 
+document.addEventListener('onclick', (event) => {clearInterval(cycle_img)}, false);
+
 document.addEventListener('keydown', (event) => {
+    clearInterval(cycle_img);
     num_links = Array.from(document.querySelectorAll("article a")).length;
     if (event.keyCode == 74 || event.keyCode == 40) {
         idx_shown = (idx_shown + 1) % num_links;
@@ -37,7 +41,6 @@ function display_from_key() {
     }
 }
 function displayImage(imageURL) {
-    clearInterval(cycle_img);
     var bg = document.getElementById('bg');
     bg.style.top = '25vh';
     bg.style.right = '10vw';
@@ -57,7 +60,6 @@ function displayImage(imageURL) {
     full = false;
 }
 function displayText(txtURL) {
-    clearInterval(cycle_img);
     var bg = document.getElementById('bg');
     bg.style.overflowY = 'auto';
     bg.style.top = '25vh';
