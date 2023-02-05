@@ -17,14 +17,17 @@ var cycle_img = window.setInterval(function(){
 document.addEventListener('keydown', (event) => {
     clearInterval(cycle_img);
     num_links = Array.from(document.querySelectorAll("article a")).length;
-    if (event.keyCode == 74 || event.keyCode == 40) {
-        idx_shown = (idx_shown + 1) % num_links;
-        display_from_key();
-    } else if (event.keyCode == 75 || event.keyCode == 38) {
-        idx_shown = (((idx_shown - 1) % num_links) + num_links) % num_links;
-        display_from_key();
-    } else if (event.keyCode == 32 || event.keyCode == 13) {
-        toggleBG();
+    switch (event.key) {
+        case "Down":
+        case "ArrowDown":
+            idx_shown = (idx_shown + 1) % num_links;
+            display_from_key();
+        case "Up":
+        case "ArrowUp":
+            idx_shown = (((idx_shown - 1) % num_links) + num_links) % num_links;
+            display_from_key();
+        case " ":
+            toggleBG();
     } }, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("article a")) {
