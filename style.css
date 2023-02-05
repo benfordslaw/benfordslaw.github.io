@@ -20,7 +20,4 @@ a:hover {background-color:green; cursor:alias}
   background-color: yellow;
   display: block;
   position: fixed;
-  top: 75vh;
-  right: 10vw;
-  width: 30vw;
 }

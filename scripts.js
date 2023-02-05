@@ -83,6 +83,10 @@ function display_caption(imageURL) {
                 if (a_2.innerHTML.includes(".txt")){
                     txtURL = a_2.firstChild.getAttribute('onclick').split('"')[1];
                     caption = document.getElementById('caption');
+                    caption.style.right = '10vw';
+                    caption.style.width = '30vw';
+                    caption.style.top = '75vh';
+                    caption.style.bottom = '';
                     var rawFile = new XMLHttpRequest();
                     rawFile.open('GET', txtURL, false);
                     rawFile.onreadystatechange = function ()
@@ -147,7 +151,7 @@ function toggleBG() {
         full = true;
         bg.style.cursor = 'zoom-out';
         caption = document.getElementById('caption');
-        caption.removeElement('style');
+        caption.removeAttribute('style');
         caption.style.right = '0vw';
         caption.style.width = '100vw';
         caption.style.bottom = '0vh';
@@ -164,6 +168,5 @@ function toggleBG() {
         caption.style.width = '30vw';
         caption.style.top = '75vh';
         caption.style.bottom = '';
-
     }
 }
