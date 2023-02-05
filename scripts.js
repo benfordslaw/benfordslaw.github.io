@@ -146,7 +146,10 @@ function toggleBG() {
         bg.style.height = '80vh';
         full = true;
         bg.style.cursor = 'zoom-out';
-        hide_caption();
+        caption = document.getElementById('caption');
+        caption.style.right = '10vw';
+        caption.style.width = '80vw';
+        caption.style.bottom = '0vh';
     }
     else {
         bg.style.top = '25vh';
@@ -155,5 +158,10 @@ function toggleBG() {
         bg.style.height = '50vh';
         full = false;
         bg.style.cursor = 'zoom-in';
+        caption = document.getElementById('caption');
+        caption.style.right = '10vw';
+        caption.style.width = '30vw';
+        caption.style.top = '75vh';
+
     }
 }
