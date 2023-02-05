@@ -60,6 +60,30 @@ function displayImage(imageURL) {
     bg.style.cursor = 'color';
     bg.style.zIndex = '1';
     bg.innerHTML = '';
+    for (const a of document.querySelectorAll("article a")) {
+        if (a.getAttribute('onclick').includes(imageURL)) {
+            for ( const a_2 of a.parentNode.children ) {
+                if (a_2.innerHTML.includes(".txt")){
+                    txtURL = a_2.getAttribute('onclick').split('"')[1];
+                    caption = document.getElementById('caption');
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.open('GET', txtURL, false);
+                    rawFile.onreadystatechange = function ()
+                    {
+                        if(rawFile.readyState === 4)
+                        {
+                            if(rawFile.status === 200 || rawFile.status == 0)
+                            {
+                                var allText = rawFile.responseText;
+                                caption.innerHTML = allText;
+                            }
+                        }
+                    }
+                    rawFile.send(null);
+                }
+            }
+        }
+    }
     update_links(imageURL);
     full = false;
 }

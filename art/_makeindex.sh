@@ -8,7 +8,7 @@ echo "<!DOCTYPE html><html><head>
     <script src="../scripts.js"></script>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'> 
   </head><body>
-  <div id='bg' onclick='toggleBG()'></div>" $(cat ../bio.txt) "<article>" >> $OUTPUT
+  <div><div id='bg' onclick='toggleBG()'></div><div id='caption'></div></div>" $(cat ../bio.txt) "<article>" >> $OUTPUT
 for filepath in `find "$ROOT" -maxdepth 1 -mindepth 1 -type d`; do
   path=`basename "$filepath"`
   echo "<div>$path/<ul><ul>" >> $OUTPUT
