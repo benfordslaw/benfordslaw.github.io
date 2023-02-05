@@ -1,5 +1,4 @@
 let idx_shown = 0;
-document.onload(display_from_key());
 
 document.addEventListener('keydown', (event) => {
     if (event.keyCode == 74 || event.keyCode == 40) {
@@ -25,12 +24,14 @@ function update_links(imageURL) {
     }
 }
 function display_from_key() {
-    var url = Array.from(document.querySelectorAll("a"))[idx_shown].getAttribute('onclick').split('"')[1];
-    if (url.includes(".txt")) {
-        displayText(url);
-    } else {
-        displayImage(url);
-    }
+    let curr_element = Array.from(document.querySelectorAll("a"))[idx_shown];
+    if (curr_element.hasAttribute('onclick')) {
+        var url = Array.from(document.querySelectorAll("a"))[idx_shown].getAttribute('onclick').split('"')[1];
+        if (url.includes(".txt")) {
+            displayText(url);
+        } else {
+            displayImage(url);
+        }}
 }
 function displayImage(imageURL) {
     var bg = document.getElementById('bg');
