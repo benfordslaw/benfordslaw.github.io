@@ -20,14 +20,22 @@ document.addEventListener('keydown', (event) => {
     switch (event.key) {
         case "Down":
         case "ArrowDown":
+        case "j":
             idx_shown = (idx_shown + 1) % num_links;
             display_from_key();
+            break;
         case "Up":
         case "ArrowUp":
+        case "k":
             idx_shown = (((idx_shown - 1) % num_links) + num_links) % num_links;
             display_from_key();
+            break;
         case " ":
+        case "Enter":
             toggleBG();
+            break;
+        default:
+            return;
     } }, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("article a")) {
