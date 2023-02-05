@@ -149,8 +149,7 @@ function toggleBG() {
         caption = document.getElementById('caption');
         caption.style.right = '10vw';
         caption.style.width = '80vw';
-        caption.style.bottom = '0vh';
-        caption.style.top = '';
+        caption.style.top = '90vh';
     }
     else {
         bg.style.top = '25vh';
@@ -163,7 +162,6 @@ function toggleBG() {
         caption.style.right = '10vw';
         caption.style.width = '30vw';
         caption.style.top = '75vh';
-        caption.style.bottom = '';
 
     }
 }
