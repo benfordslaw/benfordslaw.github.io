@@ -1,22 +1,23 @@
 let idx_shown = 0;
+var full = false;
 
 document.addEventListener('keydown', (event) => {
+    num_links = Array.from(document.querySelectorAll("article a")).length;
     if (event.keyCode == 74 || event.keyCode == 40) {
-        num_links = Array.from(document.querySelectorAll("a")).length;
         idx_shown = (idx_shown + 1) % num_links;
     } else if (event.keyCode == 75 || event.keyCode == 38) {
         idx_shown = (idx_shown - 1) % num_links;
-    } else if (event.keyCode == 32) {
+    } else if (event.keyCode == 32 || event.keyCode == 13) {
         toggleBG();
     }
     display_from_key();
 }, false);
 function update_links(imageURL) {
-    for (const a of document.querySelectorAll("a")) {
+    for (const a of document.querySelectorAll("article a")) {
         if (a.hasAttribute('onclick')) {
             if (a.getAttribute('onclick').includes(imageURL)) {
                 a.style.backgroundColor = 'yellow';
-                idx_shown = Array.from(document.querySelectorAll("a")).indexOf(a);
+                idx_shown = Array.from(document.querySelectorAll("article a")).indexOf(a);
             } else {
                 a.style.backgroundColor = '';
             }
@@ -24,9 +25,9 @@ function update_links(imageURL) {
     }
 }
 function display_from_key() {
-    let curr_element = Array.from(document.querySelectorAll("a"))[idx_shown];
+    let curr_element = Array.from(document.querySelectorAll("article a"))[idx_shown];
     if (curr_element.hasAttribute('onclick')) {
-        var url = Array.from(document.querySelectorAll("a"))[idx_shown].getAttribute('onclick').split('"')[1];
+        var url = Array.from(document.querySelectorAll("article a"))[idx_shown].getAttribute('onclick').split('"')[1];
         if (url.includes(".txt")) {
             displayText(url);
         } else {
@@ -81,7 +82,6 @@ function displayText(txtURL) {
     bg.style.zIndex = '1';
     update_links(txtURL);
 }
-var full = false;
 function toggleBG() {
     if (!full) {
         bg.style.top = '10vh';
