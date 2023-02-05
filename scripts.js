@@ -1,15 +1,24 @@
 let idx_shown = 0;
 
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode == 74 || event.keyCode == 40) {
+        idx_shown += 1;
+    }
+    display_from_key();
+}, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("a")) {
         if (imageURL.includes('/' + a.innerHTML)) {
             a.style.backgroundColor = 'yellow';
-            idx_shown = Array.from(a.parentNode.children).indexOf(a);
-            console.log(idx_shown);
+            idx_shown = Array.from(document.querySelectorAll("a")).indexOf(a);
         } else {
             a.style.backgroundColor = '';
         }
     }
+}
+function display_from_key() {
+    var image = Array.from(document.querySelectorAll("a"))[idx_shown];
+    console.log(image);
 }
 function displayImage(imageURL) {
     var bg = document.getElementById('bg');
@@ -57,7 +66,7 @@ function displayText(txtURL) {
     }
     rawFile.send(null);
     bg.style.zIndex = '1';
-    update_links(imageURL);
+    update_links(txtURL);
 }
 var full = false;
 function toggleBG() {
