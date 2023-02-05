@@ -147,9 +147,10 @@ function toggleBG() {
         full = true;
         bg.style.cursor = 'zoom-out';
         caption = document.getElementById('caption');
-        caption.style.right = '10vw';
-        caption.style.width = '80vw';
-        caption.style.top = '90vh';
+        caption.style.right = '0vw';
+        caption.style.width = '100vw';
+        caption.style.bottom = '0vh';
+        caption.style.top = '';
     }
     else {
         bg.style.top = '25vh';
@@ -162,6 +163,7 @@ function toggleBG() {
         caption.style.right = '10vw';
         caption.style.width = '30vw';
         caption.style.top = '75vh';
+        caption.style.bottom = '';
 
     }
 }
