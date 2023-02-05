@@ -4,6 +4,9 @@ document.addEventListener('keydown', (event) => {
     if (event.keyCode == 74 || event.keyCode == 40) {
         idx_shown += 1;
     }
+    if (event.keyCode == 75 || event.keyCode == 38) {
+        idx_shown -= 1;
+    }
     display_from_key();
 }, false);
 function update_links(imageURL) {
@@ -18,7 +21,7 @@ function update_links(imageURL) {
 }
 function display_from_key() {
     var image = Array.from(document.querySelectorAll("a"))[idx_shown];
-    console.log(image);
+    image.getAttribute('onclick')
 }
 function displayImage(imageURL) {
     var bg = document.getElementById('bg');
