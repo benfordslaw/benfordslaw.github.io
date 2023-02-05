@@ -15,8 +15,10 @@ function displayImage(imageURL) {
     bg.style.zIndex = '1';
     bg.innerHTML = '';
     for (const a of document.querySelectorAll("a")) {
-        if (a.textContent.includes(imageURL)) {
-            console.log(a.textContent)
+        if (imageURL.includes('/' + a.innerHTML)) {
+            a.style.backgroundColor = 'lime';
+        } else {
+            a.style.backgroundColor = 'transparent';
         }
     }
 }
