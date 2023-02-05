@@ -6,7 +6,7 @@ document.addEventListener('keydown', (event) => {
     if (event.keyCode == 74 || event.keyCode == 40) {
         idx_shown = (idx_shown + 1) % num_links;
     } else if (event.keyCode == 75 || event.keyCode == 38) {
-        idx_shown = (idx_shown - 1) % num_links;
+        idx_shown = (((idx_shown - 1) % num_links) + num_links) % num_links;
     } else if (event.keyCode == 32 || event.keyCode == 13) {
         toggleBG();
     }
@@ -14,25 +14,21 @@ document.addEventListener('keydown', (event) => {
 }, false);
 function update_links(imageURL) {
     for (const a of document.querySelectorAll("article a")) {
-        if (a.hasAttribute('onclick')) {
-            if (a.getAttribute('onclick').includes(imageURL)) {
-                a.style.backgroundColor = 'yellow';
-                idx_shown = Array.from(document.querySelectorAll("article a")).indexOf(a);
-            } else {
-                a.style.backgroundColor = '';
-            }
+        if (a.getAttribute('onclick').includes(imageURL)) {
+            a.style.backgroundColor = 'yellow';
+            idx_shown = Array.from(document.querySelectorAll("article a")).indexOf(a);
+        } else {
+            a.style.backgroundColor = '';
         }
     }
 }
 function display_from_key() {
-    let curr_element = Array.from(document.querySelectorAll("article a"))[idx_shown];
-    if (curr_element.hasAttribute('onclick')) {
-        var url = Array.from(document.querySelectorAll("article a"))[idx_shown].getAttribute('onclick').split('"')[1];
-        if (url.includes(".txt")) {
-            displayText(url);
-        } else {
-            displayImage(url);
-        }}
+    var url = Array.from(document.querySelectorAll("article a"))[idx_shown].getAttribute('onclick').split('"')[1];
+    if (url.includes(".txt")) {
+        displayText(url);
+    } else {
+        displayImage(url);
+    }
 }
 function displayImage(imageURL) {
     var bg = document.getElementById('bg');
