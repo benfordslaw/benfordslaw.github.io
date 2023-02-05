@@ -10,8 +10,8 @@ window.onload = (event) => {
 }
 
 var cycle_img = window.setInterval(function(){
-    display_from_key();
     idx_shown = Math.floor(Math.random() * Array.from(document.querySelectorAll("article a")).length);
+    display_from_key();
 }, 2500);
 
 document.addEventListener('keydown', (event) => {
