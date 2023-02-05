@@ -143,6 +143,7 @@ function displayText(txtURL) {
     bg.style.zIndex = '1';
     update_links(txtURL);
     full = false;
+    curr_image = txtURL;
 }
 function toggleBG() {
     if (!full) {

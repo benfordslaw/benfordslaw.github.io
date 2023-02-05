@@ -1,1 +1,1 @@
-<i>program to generate cursive text</i><br>
+<i>generated cursive text</i><br>
