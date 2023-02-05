@@ -1,5 +1,5 @@
 let idx_shown = 0;
-let article = document.querySelectorAll("article");
+let article = document.querySelector("article");
 let num_links = Array.from(article.querySelectorAll("a")).length;
 document.onload(display_from_key());
 
