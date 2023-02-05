@@ -81,7 +81,7 @@ function display_caption(imageURL) {
                             if(rawFile.status === 200 || rawFile.status == 0)
                             {
                                 var allText = rawFile.responseText;
-                                caption.innerHTML = allText;
+                                caption.innerHTML = allText.split("<br>")[0];
                             }
                         }
                     }
