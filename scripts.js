@@ -98,7 +98,7 @@ function display_caption(imageURL) {
                             if(rawFile.status === 200 || rawFile.status == 0)
                             {
                                 var allText = rawFile.responseText;
-                                caption.innerHTML = "imageURL" + allText.split("<br>")[0];
+                                caption.innerHTML = allText.split("<br>")[0];
                             }
                         }
                     }
@@ -157,7 +157,7 @@ function toggleBG() {
         caption.style.right = '0vw';
         caption.style.width = '100vw';
         caption.style.bottom = '0vh';
-        caption.innerHTML += '<p align="right"> ' + curr_image + '</p>';
+        caption.innerHTML += '<span align="right"> ' + curr_image + '</span>';
     }
     else {
         bg.style.top = '25vh';
@@ -171,6 +171,6 @@ function toggleBG() {
         caption.style.width = '30vw';
         caption.style.top = '75vh';
         caption.style.bottom = '';
-        caption.innerHTML = caption.innerHTML.split("<p")[0];
+        caption.innerHTML = caption.innerHTML.split("<span")[0];
     }
 }
