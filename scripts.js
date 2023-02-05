@@ -147,10 +147,10 @@ function toggleBG() {
         full = true;
         bg.style.cursor = 'zoom-out';
         caption = document.getElementById('caption');
+        caption.removeElement('style');
         caption.style.right = '0vw';
         caption.style.width = '100vw';
         caption.style.bottom = '0vh';
-        caption.style.top = '';
     }
     else {
         bg.style.top = '25vh';
