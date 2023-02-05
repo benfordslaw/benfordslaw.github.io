@@ -1,21 +1,26 @@
 let idx_shown = 0;
+let article = document.querySelectorAll("article");
+let num_links = Array.from(article.querySelectorAll("a")).length;
+document.onload(display_from_key());
 
 document.addEventListener('keydown', (event) => {
     if (event.keyCode == 74 || event.keyCode == 40) {
-        num_links = Array.from(document.querySelectorAll("a")).length;
         idx_shown = (idx_shown + 1) % num_links;
     }
     if (event.keyCode == 75 || event.keyCode == 38) {
         idx_shown = (idx_shown - 1) % num_links;
     }
+    if (event.keyCode == 32) {
+        toggleBG();
+    }
     display_from_key();
 }, false);
 function update_links(imageURL) {
-    for (const a of document.querySelectorAll("a")) {
+    for (const a of article.querySelectorAll("a")) {
         if (a.hasAttribute('onclick')) {
             if (a.getAttribute('onclick').includes(imageURL)) {
                 a.style.backgroundColor = 'yellow';
-                idx_shown = Array.from(document.querySelectorAll("a")).indexOf(a);
+                idx_shown = Array.from(article.querySelectorAll("a")).indexOf(a);
             } else {
                 a.style.backgroundColor = '';
             }
@@ -23,7 +28,7 @@ function update_links(imageURL) {
     }
 }
 function display_from_key() {
-    var url = Array.from(document.querySelectorAll("a"))[idx_shown].getAttribute('onclick').split('"')[1];
+    var url = Array.from(article.querySelectorAll("a"))[idx_shown].getAttribute('onclick').split('"')[1];
     if (url.includes(".txt")) {
         displayText(url);
     } else {
