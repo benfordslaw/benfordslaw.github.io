@@ -24,3 +24,6 @@ a:hover {background-color:green; cursor:alias}
   mix-blend-mode: multiply; 
   z-index: 1;
 }
+.caption {
+  background-color: yellow;
+}

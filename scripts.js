@@ -62,9 +62,9 @@ function displayImage(imageURL) {
     bg.innerHTML = '';
     for (const a of document.querySelectorAll("article a")) {
         if (a.getAttribute('onclick').includes(imageURL)) {
-            for ( const a_2 of a.parentNode.children ) {
+            for ( const a_2 of a.parentNode.parentNode.children ) {
                 if (a_2.innerHTML.includes(".txt")){
-                    txtURL = a_2.getAttribute('onclick').split('"')[1];
+                    txtURL = a_2.firstChild.getAttribute('onclick').split('"')[1];
                     caption = document.getElementById('caption');
                     var rawFile = new XMLHttpRequest();
                     rawFile.open('GET', txtURL, false);
