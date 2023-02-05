@@ -46,6 +46,7 @@ function display_from_key() {
 }
 function displayImage(imageURL) {
     var bg = document.getElementById('bg');
+    hide_caption();
     bg.style.top = '25vh';
     bg.style.right = '10vw';
     bg.style.width = '30vw';
@@ -96,6 +97,7 @@ function hide_caption() {
 }
 function displayText(txtURL) {
     var bg = document.getElementById('bg');
+    hide_caption();
     bg.style.overflowY = 'auto';
     bg.style.top = '25vh';
     bg.style.right = '10vw';
